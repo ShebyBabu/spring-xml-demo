@@ -23,29 +23,42 @@
 
     </bean>
 
+<bean id="movie1" class="com.stackroute.taskOne.beans.Movie" autowire="byName">
+    <property name="movieName" value="Boy"/>
+    <property name="genreName" value="Child Musical"/>
 
-    <bean id="movie1" class="com.stackroute.taskOne.beans.Movie">
-        <constructor-arg index="0" value="Student Of The Year"/>
-        <constructor-arg index="1" value="Romance"/>
-        <constructor-arg index="2" ref="actor2"/>
-    </bean>
+</bean>
 
-    <bean id="actor2" class="com.stackroute.taskOne.beans.Actor">
-        <property name="name" value="Siddharth"/>
-        <property name="gender" value="male"/>
-        <property name="age" value="27"/>
-    </bean>
-
-    <bean id="movie2" class="com.stackroute.taskOne.beans.Movie" scope="prototype">
-        <constructor-arg type="String" value="GOT"/>
-        <constructor-arg type="String" value="Historical"/>
-        <constructor-arg type="Actor" ref="actor3"/>
-    </bean>
-
-    <bean id="actor3" class="com.stackroute.taskOne.beans.Actor">
-        <property name="name" value="Sansa"/>
+    <bean id="actor" class="com.stackroute.taskOne.beans.Actor">
+        <property name="name" value="Alia Bhatt"/>
         <property name="gender" value="female"/>
-        <property name="age" value="20"/>
+        <property name="age" value="24"/>
     </bean>
+<!--    <bean id="movie1" class="com.stackroute.taskOne.beans.Movie">-->
+<!--        <constructor-arg index="0" value="Student Of The Year"/>-->
+<!--        <constructor-arg index="1" value="Romance"/>-->
+<!--        <constructor-arg index="2" ref="actor2"/>-->
+<!--    </bean>-->
 
+<!--    <bean id="actor2" class="com.stackroute.taskOne.beans.Actor">-->
+<!--        <property name="name" value="Siddharth"/>-->
+<!--        <property name="gender" value="male"/>-->
+<!--        <property name="age" value="27"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="movie2" class="com.stackroute.taskOne.beans.Movie" autowire="byType">-->
+<!--        <property name="movieName" value="Home alone"/>-->
+<!--        <property name="genreName" value="Comedy"/>-->
+<!--    </bean>-->
+
+        <bean id="movie2" class="com.stackroute.taskOne.beans.Movie">
+            <constructor-arg index="0" value="Home alone"/>
+            <constructor-arg index="1" value="Comedy"/>
+            <constructor-arg index="2" ref="actor3"/>
+        </bean>
+    <bean id="actor3" class="com.stackroute.taskOne.beans.Actor">
+        <property name="name" value="Sandy"/>
+        <property name="gender" value="male"/>
+        <property name="age" value="8"/>
+    </bean>
 </beans>

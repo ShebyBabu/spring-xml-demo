@@ -49,9 +49,10 @@ public class Main {
         System.out.println("Movie : \n Movie Name: "+movie.getMovieName()+"\n Genre: "+movie.getGenreName()+"\n Actor: "+movie.getActor());
         System.out.println("\n");
 
-        Movie movie1=(Movie) context.getBean("movie1");
+        Movie movie1=(Movie) context.getBean("movie1",Movie.class);
         System.out.println("Movie : \n Movie Name: "+movie1.getMovieName()+"\n Genre: "+movie1.getGenreName()+"\n Actor: "+movie1.getActor());
         System.out.println("\n");
+
         Movie movie2=(Movie) context.getBean("movie2");
         System.out.println("Movie : \n Movie Name: "+movie2.getMovieName()+"\n Genre: "+movie2.getGenreName()+"\n Actor: "+movie2.getActor());
         System.out.println("\n");
